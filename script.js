@@ -1,6 +1,11 @@
 (() => {
   'use strict';
 
+  // Mark JS as active — this only runs if script.js itself loaded and
+  // executed successfully, so the CSS reveal-hiding rules only kick in
+  // when we're guaranteed something will actually reveal the content.
+  document.documentElement.className += ' js';
+
   /* =========================================================
      i18n
   ========================================================= */
@@ -115,6 +120,29 @@
   const sections = document.querySelectorAll('section[id]');
   const links = document.querySelectorAll('.nav-links a');
 
+  /* =========================================================
+     Hero parallax + fade
+  ========================================================= */
+  const heroBanner = document.getElementById('heroBanner');
+  const heroContent = document.getElementById('heroContent');
+  const heroSection = document.querySelector('.hero');
+  let ticking = false;
+
+  function parallaxHero(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const h = heroSection.offsetHeight;
+      const y = Math.min(window.scrollY, h);
+      const ratio = y / h;
+      heroBanner.style.transform = `translateY(${y * 0.35}px) scale(${1 + ratio * 0.08})`;
+      heroBanner.style.opacity = String(Math.max(1 - ratio * 1.4, 0));
+      heroContent.style.transform = `translateY(${y * 0.2}px)`;
+      heroContent.style.opacity = String(Math.max(1 - ratio * 1.6, 0));
+      ticking = false;
+    });
+  }
+
   function onScroll(){
     navbar.classList.toggle('scrolled', window.scrollY > 40);
 
@@ -144,41 +172,33 @@
   }));
 
   /* =========================================================
-     Hero parallax + fade
-  ========================================================= */
-  const heroBanner = document.getElementById('heroBanner');
-  const heroContent = document.getElementById('heroContent');
-  const heroSection = document.querySelector('.hero');
-  let ticking = false;
-
-  function parallaxHero(){
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(() => {
-      const h = heroSection.offsetHeight;
-      const y = Math.min(window.scrollY, h);
-      const ratio = y / h;
-      heroBanner.style.transform = `translateY(${y * 0.35}px) scale(${1 + ratio * 0.08})`;
-      heroBanner.style.opacity = String(Math.max(1 - ratio * 1.4, 0));
-      heroContent.style.transform = `translateY(${y * 0.2}px)`;
-      heroContent.style.opacity = String(Math.max(1 - ratio * 1.6, 0));
-      ticking = false;
-    });
-  }
-
-  /* =========================================================
      Scroll reveals
   ========================================================= */
   const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting){
-        entry.target.classList.add('is-visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold:0.15, rootMargin:'0px 0px -60px 0px' });
-  revealEls.forEach(el => io.observe(el));
+  try {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.15, rootMargin:'0px 0px -60px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  } catch (e) {
+    // IntersectionObserver unsupported/failed: show everything immediately
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  }
+
+  // Safety net: if something above throws before reaching this point in a
+  // browser without full support, force every section visible after a
+  // short delay so the page is never stuck blank.
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.is-visible), .reveal-stagger:not(.is-visible)')
+        .forEach(el => el.classList.add('is-visible'));
+    }, 2500);
+  });
 
   /* =========================================================
      Floating background particles
