@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ops — Roblox Developer</title>
+<meta name="description" content="Ops — French Roblox developer. Scripting, UI design and environment building for KPS Production, 1Week Studio, TipJar Games and BrasilBlox Studio.">
+<meta name="theme-color" content="#07070c">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Ops — Roblox Developer">
+<meta property="og:description" content="French Roblox developer — scripting, UI &amp; building.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/discord-pfp.png">
+
+<link rel="icon" href="assets/studios/kps-production.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="particles" id="particles" aria-hidden="true"></div>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand"><span class="dot"></span>OPS</a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" data-i18n="nav.home">Accueil</a>
+      <a href="#skills" data-i18n="nav.skills">Compétences</a>
+      <a href="#projects" data-i18n="nav.projects">Projets</a>
+      <a href="#journey" data-i18n="nav.journey">Parcours</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="nav-right">
+      <div class="lang-switch" role="group" aria-label="Language selector">
+        <button type="button" data-lang="fr" class="active">FR</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-banner-wrap">
+    <img src="assets/img/discord-banner.png" alt="" class="hero-banner" id="heroBanner">
+    <div class="hero-banner-fade"></div>
+  </div>
+
+  <div class="hero-content" id="heroContent">
+    <div class="hero-avatar-ring">
+      <img src="assets/img/discord-pfp.png" alt="Portrait Discord d'Ops">
+    </div>
+
+    <h1 class="hero-title">OPS <span class="grad">.dev</span></h1>
+    <p class="hero-role"><span data-i18n="hero.role1">Développeur Roblox</span> — <span class="studio-name" data-i18n="hero.role2">CEO de KPS Production &amp; TipJar Games</span></p>
+
+    <div class="hero-badges">
+      <span class="hero-badge"><img src="assets/studios/kps-production.png" alt="">KPS Production</span>
+      <span class="hero-badge"><img src="assets/studios/1week-studio.png" alt="">1Week Studio</span>
+      <span class="hero-badge"><img src="assets/studios/tipjar-games.png" alt="">TipJar Games</span>
+      <span class="hero-badge"><img src="assets/studios/brasilblox-studio.png" alt="">BrasilBlox Studio</span>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary" data-i18n="hero.cta1">Voir les projets</a>
+      <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta2">Me contacter</a>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><span data-i18n="hero.scroll">Scroll</span><span class="stick"></span></div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-copy reveal">
+      <span class="eyebrow" data-i18n="about.eyebrow">À propos</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:600;letter-spacing:-0.02em;margin-bottom:1.4rem;" data-i18n="about.title">Qui suis-je</h2>
+      <p data-i18n="about.p1">Je suis Ops, développeur Roblox français passionné par la création d'expériences immersives et de systèmes performants.</p>
+      <p data-i18n="about.p2">Guidé par la curiosité et une envie constante de progresser, je cherche toujours à élargir mes connaissances et à relever de nouveaux défis.</p>
+      <p data-i18n="about.p3">Je m'investis pleinement dans chaque projet, en portant une attention particulière à la qualité du code, à la performance, à l'expérience joueur et aux détails qui font toute la différence.</p>
+      <p data-i18n="about.p4">Mon objectif est de construire des jeux et des systèmes fiables, optimisés et agréables à utiliser.</p>
+      <p data-i18n="about.p5">À travers mon travail, je continue de progresser en tant que développeur, de collaborer sur des projets ambitieux et de transformer des idées créatives en expériences Roblox de qualité.</p>
+    </div>
+
+    <div class="about-visual reveal">
+      <div class="orbit">
+        <div class="orbit-ring"></div>
+        <div class="orbit-ring r2"></div>
+        <div class="orbit-core"><img src="assets/studios/kps-production.png" alt="KPS Production"></div>
+        <div class="orbit-node n1"><img src="assets/studios/kps-fr.png" alt="KPS Studio FR"></div>
+        <div class="orbit-node n2"><img src="assets/studios/kps-en.png" alt="KPS Studio EN"></div>
+        <div class="orbit-node n3"><img src="assets/studios/kps-es.png" alt="KPS Studio ES"></div>
+        <div class="orbit-node n4"><img src="assets/studios/kps-intl.png" alt="KPS Studio INTL"></div>
+        <div class="orbit-node n5"><img src="assets/studios/brasilblox-studio.png" alt="BrasilBlox Studio"></div>
+      </div>
+      <p class="orbit-caption" data-i18n="about.orbit">Un réseau de studios multilingues, FR · EN · ES · INTL</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="skills" id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="skills.eyebrow">Ce que je fais</span>
+      <h2 data-i18n="skills.title">Compétences clés</h2>
+      <p data-i18n="skills.subtitle">Trois disciplines, un seul objectif : des expériences Roblox soignées de bout en bout.</p>
+    </div>
+
+    <div class="skills-grid reveal-stagger">
+      <div class="skill-card">
+        <span class="skill-num">01</span>
+        <h3 data-i18n="skills.card1.title">UI Design</h3>
+        <p class="skill-tag" data-i18n="skills.card1.tag">Interfaces claires &amp; modernes</p>
+        <ul>
+          <li data-i18n="skills.card1.li1">Souci du détail</li>
+          <li data-i18n="skills.card1.li2">UI propre et cohérente</li>
+          <li data-i18n="skills.card1.li3">Design visuel professionnel</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <span class="skill-num">02</span>
+        <h3 data-i18n="skills.card2.title">Building</h3>
+        <p class="skill-tag" data-i18n="skills.card2.tag">Conception d'environnements Roblox</p>
+        <ul>
+          <li data-i18n="skills.card2.li1">Builds optimisés</li>
+          <li data-i18n="skills.card2.li2">Environnements créatifs</li>
+          <li data-i18n="skills.card2.li3">Structures propres et organisées</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <span class="skill-num">03</span>
+        <h3 data-i18n="skills.card3.title">Scripting</h3>
+        <p class="skill-tag" data-i18n="skills.card3.tag">Systèmes en Lua</p>
+        <ul>
+          <li data-i18n="skills.card3.li1">Code propre et maintenable</li>
+          <li data-i18n="skills.card3.li2">Optimisation des performances</li>
+          <li data-i18n="skills.card3.li3">Systèmes de jeu évolutifs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS / STUDIOS ================= -->
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="projects.eyebrow">Collaborations</span>
+      <h2 data-i18n="projects.title">Studios &amp; projets</h2>
+      <p data-i18n="projects.subtitle">Les studios avec lesquels je construis des expériences Roblox au quotidien.</p>
+    </div>
+
+    <div class="studios-grid reveal-stagger">
+      <div class="studio-card">
+        <div class="studio-logo"><img src="assets/studios/kps-production.png" alt="Logo KPS Production"></div>
+        <div class="studio-body">
+          <h3>KPS Production</h3>
+          <p data-i18n="projects.kps.desc">Studios Roblox spécialisés dans des expériences de jeu multilingues.</p>
+          <span class="studio-tag" data-i18n="projects.kps.tag">C.E.O</span>
+        </div>
+      </div>
+
+      <div class="studio-card">
+        <div class="studio-logo"><img src="assets/studios/1week-studio.png" alt="Logo 1Week Studio"></div>
+        <div class="studio-body">
+          <h3>1Week Studio</h3>
+          <p data-i18n="projects.1week.desc">Studio de développement rapide — des jeux entiers conçus en une semaine.</p>
+          <span class="studio-tag" data-i18n="projects.1week.tag">Collaboration</span>
+        </div>
+      </div>
+
+      <div class="studio-card">
+        <div class="studio-logo"><img src="assets/studios/tipjar-games.png" alt="Logo TipJar Games"></div>
+        <div class="studio-body">
+          <h3>TipJar Games</h3>
+          <p data-i18n="projects.tipjar.desc">Expériences Roblox basées sur un système de dons.</p>
+          <span class="studio-tag" data-i18n="projects.tipjar.tag">C.E.O</span>
+        </div>
+      </div>
+
+      <div class="studio-card">
+        <div class="studio-logo"><img src="assets/studios/brasilblox-studio.png" alt="Logo BrasilBlox Studio"></div>
+        <div class="studio-body">
+          <h3>BrasilBlox Studio</h3>
+          <p data-i18n="projects.brasilblox.desc">Jeux Roblox multilingues axés sur le chat vocal.</p>
+          <span class="studio-tag" data-i18n="projects.brasilblox.tag">Collaboration</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY / DISCOVER ================= -->
+<section class="discover" id="journey">
+  <div class="container">
+    <div class="discover-panel reveal">
+      <h2 data-i18n="discover.title">Ce que vous allez découvrir</h2>
+      <p data-i18n="discover.p1">Ce portfolio présente mes projets Roblox, mon parcours de développement, mon travail créatif et mon expertise technique.</p>
+      <p data-i18n="discover.p2">Vous y découvrirez les jeux que j'ai créés, les systèmes que j'ai développés, les studios avec lesquels j'ai collaboré et mon évolution en tant que développeur Roblox.</p>
+      <p data-i18n="discover.p3">Chaque projet reflète mon engagement envers la qualité, la performance, la créativité et l'amélioration continue.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="contact.eyebrow">Parlons-en</span>
+      <h2 data-i18n="contact.title">Contact</h2>
+      <p data-i18n="contact.subtitle">Une idée de projet, une question ou une proposition de collaboration ? Écrivez-moi.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p data-i18n="contact.info">Vous pouvez aussi me retrouver directement sur les réseaux ci-dessous.</p>
+        <div class="contact-links">
+          <a class="contact-link" href="https://x.com/Ops_RobloxDEV" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.68L23.3 22H16.9l-5-6.53L6.1 22H3l8.13-9.29L2.7 2h6.6l4.5 5.97L18.9 2zm-1.13 18h1.72L7.35 3.9H5.5L17.77 20z"/></svg>
+            x.com/Ops_RobloxDEV
+          </a>
+          <a class="contact-link" href="https://guns.lol/kps_ops" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18"/></svg>
+            guns.lol/kps_ops
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="name" data-i18n="contact.form.name">Nom</label>
+          <input type="text" id="name" name="name" autocomplete="name" required maxlength="80">
+        </div>
+        <div class="form-row">
+          <label for="email" data-i18n="contact.form.email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required maxlength="120">
+        </div>
+        <div class="form-row">
+          <label for="message" data-i18n="contact.form.message">Message</label>
+          <textarea id="message" name="message" required maxlength="2000"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit" id="formSubmit" data-i18n="contact.form.submit">Envoyer le message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-brand"><span class="dot"></span>OPS</div>
+      <p class="footer-meta" data-i18n="footer.tagline">Développeur Roblox français</p>
+    </div>
+    <p class="footer-meta">&copy; <span id="year"></span> Ops. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+    <div class="footer-social">
+      <a href="https://x.com/Ops_RobloxDEV" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.68L23.3 22H16.9l-5-6.53L6.1 22H3l8.13-9.29L2.7 2h6.6l4.5 5.97L18.9 2zm-1.13 18h1.72L7.35 3.9H5.5L17.77 20z"/></svg>
+      </a>
+      <a href="https://guns.lol/kps_ops" target="_blank" rel="noopener noreferrer" aria-label="Guns.lol">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
