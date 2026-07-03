@@ -391,14 +391,19 @@ section{ position:relative; padding:7rem 0; }
 /* ==========================================================================
    Reveal utility
    ========================================================================== */
-.reveal{
+/* Default: visible (no-JS / JS-failure fallback). Only hidden once html.js
+   confirms the reveal script is running and will animate items in. */
+.reveal{ opacity:1; transform:none; }
+html.js .reveal{
   opacity:0;
   transform:translateY(28px);
   transition:opacity .8s var(--ease), transform .8s var(--ease);
 }
-.reveal.is-visible{ opacity:1; transform:translateY(0); }
-.reveal-stagger.is-visible > *{ opacity:1; transform:none; }
-.reveal-stagger > *{
+html.js .reveal.is-visible{ opacity:1; transform:translateY(0); }
+
+.reveal-stagger > *{ opacity:1; transform:none; }
+html.js .reveal-stagger.is-visible > *{ opacity:1; transform:none; }
+html.js .reveal-stagger > *{
   opacity:0; transform:translateY(24px);
   transition:opacity .7s var(--ease), transform .7s var(--ease);
 }
@@ -452,47 +457,45 @@ section{ position:relative; padding:7rem 0; }
   filter:blur(70px);
   opacity:.25;
 }
-.orbit{
-  position:relative;
-  width:100%;
-  aspect-ratio:1/1;
-  max-width:340px;
+.studio-cluster{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:14px;
+  max-width:360px;
   margin-inline:auto;
 }
-.orbit-ring{
-  position:absolute; inset:0;
-  border:1px dashed var(--border-hi);
-  border-radius:50%;
+.cluster-tile{
+  aspect-ratio:1/1;
+  border-radius:16px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid var(--border);
+  display:flex; align-items:center; justify-content:center;
+  padding:12px;
+  animation:tile-float 5s ease-in-out infinite;
+  transition:transform .4s var(--ease), border-color .4s var(--ease), background .4s var(--ease);
 }
-.orbit-ring.r2{ inset:15%; border-style:dotted; }
-.orbit-core{
-  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-  width:76px; height:76px; border-radius:50%;
+.cluster-tile:hover{
+  transform:translateY(-6px) scale(1.06);
+  border-color:var(--border-hi);
   background:var(--surface-hi);
-  border:1px solid var(--border-hi);
-  display:flex; align-items:center; justify-content:center;
-  padding:14px;
-  box-shadow:0 0 40px var(--accent-glow);
+  animation-play-state:paused;
 }
-.orbit-core img{ width:100%; }
-.orbit-node{
-  position:absolute;
-  width:46px; height:46px; border-radius:50%;
-  background:#101018;
-  border:1px solid var(--border-hi);
-  display:flex; align-items:center; justify-content:center;
-  padding:8px;
-  animation:orbit-spin 26s linear infinite;
-  transform-origin:170px 170px;
+.cluster-tile img{ width:100%; object-fit:contain; }
+.cluster-tile:nth-child(1){ animation-delay:0s; }
+.cluster-tile:nth-child(2){ animation-delay:.4s; }
+.cluster-tile:nth-child(3){ animation-delay:.8s; }
+.cluster-tile:nth-child(4){ animation-delay:1.2s; }
+.cluster-tile:nth-child(5){ animation-delay:1.6s; }
+.cluster-tile:nth-child(6){ animation-delay:2s; }
+.cluster-tile:nth-child(7){ animation-delay:2.4s; }
+.cluster-tile:nth-child(8){ animation-delay:2.8s; }
+@keyframes tile-float{
+  0%,100%{ transform:translateY(0); }
+  50%{ transform:translateY(-5px); }
 }
-.orbit-node img{ width:100%; animation:orbit-counter 26s linear infinite; }
-.orbit-node.n1{ animation-delay:0s; }
-.orbit-node.n2{ animation-delay:-5.2s; }
-.orbit-node.n3{ animation-delay:-10.4s; }
-.orbit-node.n4{ animation-delay:-15.6s; }
-.orbit-node.n5{ animation-delay:-20.8s; }
-@keyframes orbit-spin{ from{ transform:rotate(0deg) translateX(170px) rotate(0deg); } to{ transform:rotate(360deg) translateX(170px) rotate(-360deg); } }
-@keyframes orbit-counter{ from{ transform:rotate(0deg); } to{ transform:rotate(-360deg); } }
+@media (prefers-reduced-motion: reduce){
+  .cluster-tile{ animation:none; }
+}
 .orbit-caption{
   text-align:center; margin-top:1.6rem;
   font-size:.8rem; color:var(--text-faint);
@@ -798,9 +801,7 @@ footer{
   .nav-toggle{ display:flex; }
   .lang-switch{ order:2; }
   section{ padding:4.5rem 0; }
-  .orbit{ max-width:260px; }
-  .orbit-node{ transform-origin:130px 130px; }
-  @keyframes orbit-spin{ from{ transform:rotate(0deg) translateX(130px) rotate(0deg); } to{ transform:rotate(360deg) translateX(130px) rotate(-360deg); } }
+  .studio-cluster{ max-width:280px; gap:10px; }
 }
 
 @media (max-width:480px){
