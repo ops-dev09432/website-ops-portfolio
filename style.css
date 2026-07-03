@@ -699,6 +699,7 @@ html.js .reveal-stagger > *{
   transform:translateX(4px);
 }
 .contact-link svg{ width:18px; height:18px; flex:0 0 auto; color:var(--accent-2); }
+.contact-link-icon{ width:18px; height:18px; flex:0 0 auto; object-fit:contain; }
 
 .contact-form{
   border:1px solid var(--border);
@@ -772,6 +773,7 @@ footer{
 }
 .footer-social a:hover{ border-color:var(--accent-2); transform:translateY(-3px); background:var(--surface); }
 .footer-social svg{ width:16px; height:16px; }
+.footer-social-icon{ width:16px; height:16px; object-fit:contain; }
 
 /* ==========================================================================
    Responsive
