@@ -32,13 +32,13 @@
       "projects.eyebrow":"Mes studios","projects.title":"Studios & projets",
       "projects.subtitle":"L'ensemble des studios que je possède et développe.",
       "projects.kps.desc":"Studio principal, structure multilingue derrière l'ensemble du réseau KPS.","projects.kps.tag":"C.E.O",
-      "projects.kpsintl.desc":"Branche internationale du réseau KPS Production.","projects.kpsintl.tag":"Mon studio",
-      "projects.kpsen.desc":"Branche anglophone du réseau KPS Production.","projects.kpsen.tag":"Mon studio",
-      "projects.kpsfr.desc":"Branche francophone du réseau KPS Production.","projects.kpsfr.tag":"Mon studio",
-      "projects.kpses.desc":"Branche hispanophone du réseau KPS Production.","projects.kpses.tag":"Mon studio",
-      "projects.1week.desc":"Mon studio de développement rapide — des jeux entiers conçus en une semaine.","projects.1week.tag":"Mon studio",
-      "projects.tipjar.desc":"Un de mes studios, spécialisé dans les expériences basées sur un système de dons.","projects.tipjar.tag":"Mon studio",
-      "projects.brasilblox.desc":"Mon studio d'expériences multilingues axées sur le chat vocal.","projects.brasilblox.tag":"Mon studio",
+      "projects.kpsintl.desc":"Branche internationale du réseau KPS Production.","projects.kpsintl.tag":"Branche perso",
+      "projects.kpsen.desc":"Branche anglophone du réseau KPS Production.","projects.kpsen.tag":"100% maison",
+      "projects.kpsfr.desc":"Branche francophone du réseau KPS Production.","projects.kpsfr.tag":"Studio perso",
+      "projects.kpses.desc":"Branche hispanophone du réseau KPS Production.","projects.kpses.tag":"Développé par moi",
+      "projects.1week.desc":"Mon studio de développement rapide — des jeux entiers conçus en une semaine.","projects.1week.tag":"Projet solo",
+      "projects.tipjar.desc":"Un de mes studios, spécialisé dans les expériences basées sur un système de dons.","projects.tipjar.tag":"Mon projet",
+      "projects.brasilblox.desc":"Mon studio d'expériences multilingues axées sur le chat vocal.","projects.brasilblox.tag":"Studio indépendant",
       "discover.title":"Ce que vous allez découvrir",
       "discover.p1":"Ce portfolio présente mes projets Roblox, mon parcours de développement, mon travail créatif et mon expertise technique.",
       "discover.p2":"Vous y découvrirez les jeux que j'ai créés, les systèmes que j'ai développés, les studios avec lesquels j'ai collaboré et mon évolution en tant que développeur Roblox.",
@@ -46,7 +46,7 @@
       "contact.eyebrow":"Parlons-en","contact.title":"Contact",
       "contact.subtitle":"Une idée de projet, une question ou une proposition de collaboration ? Écrivez-moi.",
       "contact.info":"Vous pouvez aussi me retrouver directement sur les réseaux ci-dessous.",
-      "contact.form.name":"Nom","contact.form.email":"Email","contact.form.message":"Message","contact.form.submit":"Envoyer le message",
+      "contact.form.name":"Nom","contact.form.message":"Message","contact.form.submit":"Envoyer le message",
       "footer.tagline":"Développeur Roblox français","footer.rights":"Tous droits réservés.",
       "form.sending":"Envoi en cours…","form.ok":"Message envoyé — merci, je reviens vers vous vite !",
       "form.err":"Une erreur est survenue. Réessaie ou écris-moi directement sur X.",
@@ -74,13 +74,13 @@
       "projects.eyebrow":"My studios","projects.title":"Studios & Projects",
       "projects.subtitle":"All the studios I own and develop.",
       "projects.kps.desc":"Main studio, the multilingual structure behind the whole KPS network.","projects.kps.tag":"C.E.O",
-      "projects.kpsintl.desc":"International branch of the KPS Production network.","projects.kpsintl.tag":"My studio",
-      "projects.kpsen.desc":"English-speaking branch of the KPS Production network.","projects.kpsen.tag":"My studio",
-      "projects.kpsfr.desc":"French-speaking branch of the KPS Production network.","projects.kpsfr.tag":"My studio",
-      "projects.kpses.desc":"Spanish-speaking branch of the KPS Production network.","projects.kpses.tag":"My studio",
-      "projects.1week.desc":"My fast-paced development studio — full games built in one week.","projects.1week.tag":"My studio",
-      "projects.tipjar.desc":"One of my studios, focused on donation-based experiences.","projects.tipjar.tag":"My studio",
-      "projects.brasilblox.desc":"My studio for multilingual, voice-chat focused Roblox games.","projects.brasilblox.tag":"My studio",
+      "projects.kpsintl.desc":"International branch of the KPS Production network.","projects.kpsintl.tag":"Personal branch",
+      "projects.kpsen.desc":"English-speaking branch of the KPS Production network.","projects.kpsen.tag":"In-house",
+      "projects.kpsfr.desc":"French-speaking branch of the KPS Production network.","projects.kpsfr.tag":"Personal studio",
+      "projects.kpses.desc":"Spanish-speaking branch of the KPS Production network.","projects.kpses.tag":"Built by me",
+      "projects.1week.desc":"My fast-paced development studio — full games built in one week.","projects.1week.tag":"Solo project",
+      "projects.tipjar.desc":"One of my studios, focused on donation-based experiences.","projects.tipjar.tag":"My project",
+      "projects.brasilblox.desc":"My studio for multilingual, voice-chat focused Roblox games.","projects.brasilblox.tag":"Independent studio",
       "discover.title":"What You'll Discover",
       "discover.p1":"This portfolio showcases my Roblox projects, development journey, creative work, and technical expertise.",
       "discover.p2":"You'll discover games I've built, systems I've developed, studios I've collaborated with, and my evolution as a Roblox developer.",
@@ -88,11 +88,53 @@
       "contact.eyebrow":"Let's talk","contact.title":"Contact",
       "contact.subtitle":"A project idea, a question, or a collab proposal? Write to me.",
       "contact.info":"You can also find me directly on the socials below.",
-      "contact.form.name":"Name","contact.form.email":"Email","contact.form.message":"Message","contact.form.submit":"Send message",
+      "contact.form.name":"Name","contact.form.message":"Message","contact.form.submit":"Send message",
       "footer.tagline":"French Roblox Developer","footer.rights":"All rights reserved.",
       "form.sending":"Sending…","form.ok":"Message sent — thanks, I'll get back to you soon!",
       "form.err":"Something went wrong. Try again or message me directly on X.",
       "form.required":"Please fill in every field."
+    },
+    es: {
+      "nav.home":"Inicio","nav.skills":"Habilidades","nav.projects":"Proyectos","nav.journey":"Trayectoria","nav.contact":"Contacto",
+      "hero.role1":"Desarrollador Roblox","hero.role2":"CEO de KPS Production & TipJar Games",
+      "hero.cta1":"Ver proyectos","hero.cta2":"Contactarme","hero.scroll":"Scroll",
+      "about.eyebrow":"Sobre mí","about.title":"Quién soy",
+      "about.p1":"Soy Ops, desarrollador Roblox francés apasionado por crear experiencias inmersivas y sistemas de alto rendimiento.",
+      "about.p2":"Impulsado por la curiosidad y unas ganas constantes de mejorar, siempre busco ampliar mis conocimientos y asumir nuevos retos.",
+      "about.p3":"Me dedico por completo a cada proyecto, prestando especial atención a la calidad del código, el rendimiento, la experiencia del jugador y los detalles que marcan la diferencia.",
+      "about.p4":"Mi objetivo es crear juegos y sistemas fiables, optimizados y agradables de usar.",
+      "about.p5":"A través de mi trabajo, sigo creciendo como desarrollador, colaborando en proyectos ambiciosos y convirtiendo ideas creativas en experiencias Roblox de calidad.",
+      "about.orbit":"Todos mis estudios, reunidos en un mismo lugar",
+      "skills.eyebrow":"Lo que hago","skills.title":"Habilidades clave",
+      "skills.subtitle":"Tres disciplinas, un solo objetivo: experiencias Roblox cuidadas de principio a fin.",
+      "skills.card1.title":"Diseño UI","skills.card1.tag":"Interfaces claras y modernas",
+      "skills.card1.li1":"Atención al detalle","skills.card1.li2":"UI limpia y coherente","skills.card1.li3":"Diseño visual profesional",
+      "skills.card2.title":"Building","skills.card2.tag":"Diseño de entornos Roblox",
+      "skills.card2.li1":"Builds optimizados","skills.card2.li2":"Entornos creativos","skills.card2.li3":"Estructuras limpias y organizadas",
+      "skills.card3.title":"Scripting","skills.card3.tag":"Sistemas en Lua",
+      "skills.card3.li1":"Código limpio y mantenible","skills.card3.li2":"Optimización del rendimiento","skills.card3.li3":"Sistemas de juego escalables",
+      "projects.eyebrow":"Mis estudios","projects.title":"Estudios y proyectos",
+      "projects.subtitle":"Todos los estudios que poseo y desarrollo.",
+      "projects.kps.desc":"Estudio principal, la estructura multilingüe detrás de toda la red KPS.","projects.kps.tag":"C.E.O",
+      "projects.kpsintl.desc":"Rama internacional de la red KPS Production.","projects.kpsintl.tag":"Rama personal",
+      "projects.kpsen.desc":"Rama anglófona de la red KPS Production.","projects.kpsen.tag":"Propio",
+      "projects.kpsfr.desc":"Rama francófona de la red KPS Production.","projects.kpsfr.tag":"Estudio personal",
+      "projects.kpses.desc":"Rama hispanohablante de la red KPS Production.","projects.kpses.tag":"Creado por mí",
+      "projects.1week.desc":"Mi estudio de desarrollo rápido — juegos completos creados en una semana.","projects.1week.tag":"Proyecto solo",
+      "projects.tipjar.desc":"Uno de mis estudios, centrado en experiencias basadas en donaciones.","projects.tipjar.tag":"Mi proyecto",
+      "projects.brasilblox.desc":"Mi estudio de juegos Roblox multilingües centrados en el chat de voz.","projects.brasilblox.tag":"Estudio independiente",
+      "discover.title":"Lo que vas a descubrir",
+      "discover.p1":"Este portafolio muestra mis proyectos de Roblox, mi trayectoria como desarrollador, mi trabajo creativo y mi experiencia técnica.",
+      "discover.p2":"Descubrirás los juegos que he creado, los sistemas que he desarrollado, los estudios con los que he colaborado y mi evolución como desarrollador Roblox.",
+      "discover.p3":"Cada proyecto refleja mi compromiso con la calidad, el rendimiento, la creatividad y la mejora continua.",
+      "contact.eyebrow":"Hablemos","contact.title":"Contacto",
+      "contact.subtitle":"¿Una idea de proyecto, una pregunta o una propuesta de colaboración? Escríbeme.",
+      "contact.info":"También puedes encontrarme directamente en las redes de abajo.",
+      "contact.form.name":"Nombre","contact.form.message":"Mensaje","contact.form.submit":"Enviar mensaje",
+      "footer.tagline":"Desarrollador Roblox francés","footer.rights":"Todos los derechos reservados.",
+      "form.sending":"Enviando…","form.ok":"Mensaje enviado — ¡gracias, te responderé pronto!",
+      "form.err":"Ha ocurrido un error. Inténtalo de nuevo o escríbeme directamente en X.",
+      "form.required":"Por favor, completa todos los campos."
     }
   };
 
@@ -237,10 +279,9 @@
     const dict = translations[window.__opsLang || 'fr'];
 
     const name = form.name.value.trim();
-    const email = form.email.value.trim();
     const message = form.message.value.trim();
 
-    if (!name || !email || !message){
+    if (!name || !message){
       statusEl.textContent = dict['form.required'];
       statusEl.className = 'form-status err';
       return;
@@ -254,7 +295,7 @@
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message })
+        body: JSON.stringify({ name, message })
       });
 
       if (!res.ok) throw new Error('bad response');
