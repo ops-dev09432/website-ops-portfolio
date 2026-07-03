@@ -79,6 +79,18 @@
   <div class="scroll-cue"><span data-i18n="hero.scroll">Scroll</span><span class="stick"></span></div>
 </section>
 
+<!-- ================= JOURNEY / DISCOVER ================= -->
+<section class="discover" id="journey">
+  <div class="container">
+    <div class="discover-panel reveal">
+      <h2 data-i18n="discover.title">Ce que vous allez découvrir</h2>
+      <p data-i18n="discover.p1">Ce portfolio présente mes projets Roblox, mon parcours de développement, mon travail créatif et mon expertise technique.</p>
+      <p data-i18n="discover.p2">Vous y découvrirez les jeux que j'ai créés, les systèmes que j'ai développés, les studios avec lesquels j'ai collaboré et mon évolution en tant que développeur Roblox.</p>
+      <p data-i18n="discover.p3">Chaque projet reflète mon engagement envers la qualité, la performance, la créativité et l'amélioration continue.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ================= ABOUT ================= -->
 <section class="about" id="about">
   <div class="container about-grid">
@@ -93,17 +105,17 @@
     </div>
 
     <div class="about-visual reveal">
-      <div class="orbit">
-        <div class="orbit-ring"></div>
-        <div class="orbit-ring r2"></div>
-        <div class="orbit-core"><img src="assets/studios/kps-production.png" alt="KPS Production"></div>
-        <div class="orbit-node n1"><img src="assets/studios/kps-fr.png" alt="KPS Studio FR"></div>
-        <div class="orbit-node n2"><img src="assets/studios/kps-en.png" alt="KPS Studio EN"></div>
-        <div class="orbit-node n3"><img src="assets/studios/kps-es.png" alt="KPS Studio ES"></div>
-        <div class="orbit-node n4"><img src="assets/studios/kps-intl.png" alt="KPS Studio INTL"></div>
-        <div class="orbit-node n5"><img src="assets/studios/brasilblox-studio.png" alt="BrasilBlox Studio"></div>
+      <div class="studio-cluster">
+        <div class="cluster-tile"><img src="assets/studios/kps-production.png" alt="KPS Production"></div>
+        <div class="cluster-tile"><img src="assets/studios/kps-fr.png" alt="KPS Studio FR"></div>
+        <div class="cluster-tile"><img src="assets/studios/kps-en.png" alt="KPS Studio EN"></div>
+        <div class="cluster-tile"><img src="assets/studios/kps-es.png" alt="KPS Studio ES"></div>
+        <div class="cluster-tile"><img src="assets/studios/kps-intl.png" alt="KPS Studio INTL"></div>
+        <div class="cluster-tile"><img src="assets/studios/1week-studio.png" alt="1Week Studio"></div>
+        <div class="cluster-tile"><img src="assets/studios/brasilblox-studio.png" alt="BrasilBlox Studio"></div>
+        <div class="cluster-tile"><img src="assets/studios/tipjar-games.png" alt="TipJar Games"></div>
       </div>
-      <p class="orbit-caption" data-i18n="about.orbit">Un réseau de studios multilingues, FR · EN · ES · INTL</p>
+      <p class="orbit-caption" data-i18n="about.orbit">Tous mes studios, réunis sous un même toit</p>
     </div>
   </div>
 </section>
@@ -158,9 +170,9 @@
 <section class="projects" id="projects">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow" data-i18n="projects.eyebrow">Collaborations</span>
+      <span class="eyebrow" data-i18n="projects.eyebrow">Mes studios</span>
       <h2 data-i18n="projects.title">Studios &amp; projets</h2>
-      <p data-i18n="projects.subtitle">Les studios avec lesquels je construis des expériences Roblox au quotidien.</p>
+      <p data-i18n="projects.subtitle">L'ensemble des studios que je possède et développe.</p>
     </div>
 
     <div class="studios-grid reveal-stagger">
@@ -168,8 +180,44 @@
         <div class="studio-logo"><img src="assets/studios/kps-production.png" alt="Logo KPS Production"></div>
         <div class="studio-body">
           <h3>KPS Production</h3>
-          <p data-i18n="projects.kps.desc">Studios Roblox spécialisés dans des expériences de jeu multilingues.</p>
+          <p data-i18n="projects.kps.desc">Studio principal, structure multilingue derrière l'ensemble du réseau KPS.</p>
           <span class="studio-tag" data-i18n="projects.kps.tag">C.E.O</span>
+        </div>
+      </div>
+
+      <div class="studio-card">
+        <div class="studio-logo"><img src="assets/studios/kps-intl.png" alt="Logo KPS Studio INTL"></div>
+        <div class="studio-body">
+          <h3>KPS Studio INTL</h3>
+          <p data-i18n="projects.kpsintl.desc">Branche internationale du réseau KPS Production.</p>
+          <span class="studio-tag" data-i18n="projects.kpsintl.tag">Mon studio</span>
+        </div>
+      </div>
+
+      <div class="studio-card">
+        <div class="studio-logo"><img src="assets/studios/kps-en.png" alt="Logo KPS Studio EN"></div>
+        <div class="studio-body">
+          <h3>KPS Studio EN</h3>
+          <p data-i18n="projects.kpsen.desc">Branche anglophone du réseau KPS Production.</p>
+          <span class="studio-tag" data-i18n="projects.kpsen.tag">Mon studio</span>
+        </div>
+      </div>
+
+      <div class="studio-card">
+        <div class="studio-logo"><img src="assets/studios/kps-fr.png" alt="Logo KPS Studio FR"></div>
+        <div class="studio-body">
+          <h3>KPS Studio FR</h3>
+          <p data-i18n="projects.kpsfr.desc">Branche francophone du réseau KPS Production.</p>
+          <span class="studio-tag" data-i18n="projects.kpsfr.tag">Mon studio</span>
+        </div>
+      </div>
+
+      <div class="studio-card">
+        <div class="studio-logo"><img src="assets/studios/kps-es.png" alt="Logo KPS Studio ES"></div>
+        <div class="studio-body">
+          <h3>KPS Studio ES</h3>
+          <p data-i18n="projects.kpses.desc">Branche hispanophone du réseau KPS Production.</p>
+          <span class="studio-tag" data-i18n="projects.kpses.tag">Mon studio</span>
         </div>
       </div>
 
@@ -177,17 +225,8 @@
         <div class="studio-logo"><img src="assets/studios/1week-studio.png" alt="Logo 1Week Studio"></div>
         <div class="studio-body">
           <h3>1Week Studio</h3>
-          <p data-i18n="projects.1week.desc">Studio de développement rapide — des jeux entiers conçus en une semaine.</p>
-          <span class="studio-tag" data-i18n="projects.1week.tag">Collaboration</span>
-        </div>
-      </div>
-
-      <div class="studio-card">
-        <div class="studio-logo"><img src="assets/studios/tipjar-games.png" alt="Logo TipJar Games"></div>
-        <div class="studio-body">
-          <h3>TipJar Games</h3>
-          <p data-i18n="projects.tipjar.desc">Expériences Roblox basées sur un système de dons.</p>
-          <span class="studio-tag" data-i18n="projects.tipjar.tag">C.E.O</span>
+          <p data-i18n="projects.1week.desc">Mon studio de développement rapide — des jeux entiers conçus en une semaine.</p>
+          <span class="studio-tag" data-i18n="projects.1week.tag">Mon studio</span>
         </div>
       </div>
 
@@ -195,22 +234,19 @@
         <div class="studio-logo"><img src="assets/studios/brasilblox-studio.png" alt="Logo BrasilBlox Studio"></div>
         <div class="studio-body">
           <h3>BrasilBlox Studio</h3>
-          <p data-i18n="projects.brasilblox.desc">Jeux Roblox multilingues axés sur le chat vocal.</p>
-          <span class="studio-tag" data-i18n="projects.brasilblox.tag">Collaboration</span>
+          <p data-i18n="projects.brasilblox.desc">Mon studio d'expériences multilingues axées sur le chat vocal.</p>
+          <span class="studio-tag" data-i18n="projects.brasilblox.tag">Mon studio</span>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ================= JOURNEY / DISCOVER ================= -->
-<section class="discover" id="journey">
-  <div class="container">
-    <div class="discover-panel reveal">
-      <h2 data-i18n="discover.title">Ce que vous allez découvrir</h2>
-      <p data-i18n="discover.p1">Ce portfolio présente mes projets Roblox, mon parcours de développement, mon travail créatif et mon expertise technique.</p>
-      <p data-i18n="discover.p2">Vous y découvrirez les jeux que j'ai créés, les systèmes que j'ai développés, les studios avec lesquels j'ai collaboré et mon évolution en tant que développeur Roblox.</p>
-      <p data-i18n="discover.p3">Chaque projet reflète mon engagement envers la qualité, la performance, la créativité et l'amélioration continue.</p>
+      <div class="studio-card">
+        <div class="studio-logo"><img src="assets/studios/tipjar-games.png" alt="Logo TipJar Games"></div>
+        <div class="studio-body">
+          <h3>TipJar Games</h3>
+          <p data-i18n="projects.tipjar.desc">Un de mes studios, spécialisé dans les expériences basées sur un système de dons.</p>
+          <span class="studio-tag" data-i18n="projects.tipjar.tag">Mon studio</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
