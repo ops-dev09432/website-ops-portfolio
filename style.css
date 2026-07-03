@@ -350,6 +350,9 @@ section{ position:relative; padding:7rem 0; }
   text-transform:uppercase;
   opacity:0; animation:fade-up .9s var(--ease) .9s both;
 }
+.scroll-cue > span:first-child{
+  margin-right:-.18em;
+}
 .scroll-cue .mouse{
   width:24px; height:38px;
   border:1.5px solid var(--text-faint);
