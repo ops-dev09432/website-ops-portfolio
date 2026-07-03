@@ -46,8 +46,8 @@
       "contact.eyebrow":"Parlons-en","contact.title":"Contact",
       "contact.subtitle":"Une idée de projet, une question ou une proposition de collaboration ? Écrivez-moi.",
       "contact.info":"Vous pouvez aussi me retrouver directement sur les réseaux ci-dessous.",
-      "contact.note":"Je ne réponds que via Discord, depuis mon compte : ops.contact. Indique ton pseudo Discord dans le formulaire pour que je puisse te recontacter.",
-      "contact.form.name":"Nom","contact.form.subject":"Objet du contact","contact.form.message":"Message du contact","contact.form.method":"Moyen de Contact (Discord)","contact.form.submit":"Envoyer le message",
+      "contact.note":"Je ne réponds que via Discord (ops.contact). Indique ton pseudo Discord dans le formulaire pour que je puisse te recontacter.",
+      "contact.form.name":"Nom","contact.form.subject":"Objet du contact","contact.form.message":"Message du contact","contact.form.method":"Moyen de Contact (Discord)","contact.form.methodPlaceholder":"Ton pseudo Discord","contact.form.submit":"Envoyer le message",
       "footer.tagline":"Développeur Roblox français","footer.rights":"Tous droits réservés.",
       "form.sending":"Envoi en cours…","form.ok":"Message envoyé — merci, je reviens vers vous vite !",
       "form.err":"Une erreur est survenue. Réessaie ou écris-moi directement sur X.",
@@ -89,8 +89,8 @@
       "contact.eyebrow":"Let's talk","contact.title":"Contact",
       "contact.subtitle":"A project idea, a question, or a collab proposal? Write to me.",
       "contact.info":"You can also find me directly on the socials below.",
-      "contact.note":"I only reply via Discord, from my account: ops.contact. Add your Discord username in the form so I can get back to you.",
-      "contact.form.name":"Name","contact.form.subject":"Contact subject","contact.form.message":"Contact message","contact.form.method":"Contact Method (Discord)","contact.form.submit":"Send message",
+      "contact.note":"I only reply via Discord (ops.contact). Add your Discord username in the form so I can get back to you.",
+      "contact.form.name":"Name","contact.form.subject":"Contact subject","contact.form.message":"Contact message","contact.form.method":"Contact Method (Discord)","contact.form.methodPlaceholder":"Your Discord username","contact.form.submit":"Send message",
       "footer.tagline":"French Roblox Developer","footer.rights":"All rights reserved.",
       "form.sending":"Sending…","form.ok":"Message sent — thanks, I'll get back to you soon!",
       "form.err":"Something went wrong. Try again or message me directly on X.",
@@ -132,8 +132,8 @@
       "contact.eyebrow":"Hablemos","contact.title":"Contacto",
       "contact.subtitle":"¿Una idea de proyecto, una pregunta o una propuesta de colaboración? Escríbeme.",
       "contact.info":"También puedes encontrarme directamente en las redes de abajo.",
-      "contact.note":"Solo respondo por Discord, desde mi cuenta: ops.contact. Indica tu usuario de Discord en el formulario para poder contactarte.",
-      "contact.form.name":"Nombre","contact.form.subject":"Asunto del contacto","contact.form.message":"Mensaje de contacto","contact.form.method":"Medio de Contacto (Discord)","contact.form.submit":"Enviar mensaje",
+      "contact.note":"Solo respondo por Discord (ops.contact). Indica tu usuario de Discord en el formulario para poder contactarte.",
+      "contact.form.name":"Nombre","contact.form.subject":"Asunto del contacto","contact.form.message":"Mensaje de contacto","contact.form.method":"Medio de Contacto (Discord)","contact.form.methodPlaceholder":"Tu usuario de Discord","contact.form.submit":"Enviar mensaje",
       "footer.tagline":"Desarrollador Roblox francés","footer.rights":"Todos los derechos reservados.",
       "form.sending":"Enviando…","form.ok":"Mensaje enviado — ¡gracias, te responderé pronto!",
       "form.err":"Ha ocurrido un error. Inténtalo de nuevo o escríbeme directamente en X.",
@@ -149,6 +149,10 @@
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
     });
     langButtons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
     root.setAttribute('lang', lang);
