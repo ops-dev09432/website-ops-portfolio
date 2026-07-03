@@ -35,9 +35,10 @@ module.exports = async (req, res) => {
   data = data || {};
 
   const name = String(data.name || '').trim().slice(0, 200);
+  const subject = String(data.subject || '').trim().slice(0, 200);
   const message = String(data.message || '').trim().slice(0, 2000);
 
-  if (!name || !message) {
+  if (!name || !subject || !message) {
     res.status(400).json({ error: 'Missing fields.' });
     return;
   }
@@ -47,7 +48,8 @@ module.exports = async (req, res) => {
       title: 'New portfolio contact message',
       color: 0x7b61ff,
       fields: [
-        { name: 'Name', value: name },
+        { name: 'Name', value: name, inline: true },
+        { name: 'Subject', value: subject, inline: true },
         { name: 'Message', value: message }
       ],
       timestamp: new Date().toISOString()
