@@ -12,7 +12,7 @@
   const translations = {
     fr: {
       "nav.home":"Accueil","nav.skills":"Compétences","nav.projects":"Projets","nav.journey":"Parcours","nav.contact":"Contact",
-      "hero.role1":"Développeur Roblox","hero.role2":"CEO de KPS Production & TipJar Games",
+      "hero.role1":"Développeur Roblox","hero.role2":"C.E.O de KPS Production",
       "hero.cta1":"Voir les projets","hero.cta2":"Me contacter","hero.scroll":"Scroll",
       "about.eyebrow":"À propos","about.title":"Qui suis-je",
       "about.p1":"Je suis Ops, développeur Roblox français passionné par la création d'expériences immersives et de systèmes performants.",
