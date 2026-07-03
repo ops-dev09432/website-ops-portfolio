@@ -35,17 +35,10 @@ module.exports = async (req, res) => {
   data = data || {};
 
   const name = String(data.name || '').trim().slice(0, 200);
-  const email = String(data.email || '').trim().slice(0, 200);
   const message = String(data.message || '').trim().slice(0, 2000);
 
-  if (!name || !email || !message) {
+  if (!name || !message) {
     res.status(400).json({ error: 'Missing fields.' });
-    return;
-  }
-
-  const emailLooksValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  if (!emailLooksValid) {
-    res.status(400).json({ error: 'Invalid email.' });
     return;
   }
 
@@ -54,8 +47,7 @@ module.exports = async (req, res) => {
       title: 'New portfolio contact message',
       color: 0x7b61ff,
       fields: [
-        { name: 'Name', value: name, inline: true },
-        { name: 'Email', value: email, inline: true },
+        { name: 'Name', value: name },
         { name: 'Message', value: message }
       ],
       timestamp: new Date().toISOString()
