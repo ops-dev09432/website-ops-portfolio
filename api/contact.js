@@ -37,8 +37,9 @@ module.exports = async (req, res) => {
   const name = String(data.name || '').trim().slice(0, 200);
   const subject = String(data.subject || '').trim().slice(0, 200);
   const message = String(data.message || '').trim().slice(0, 2000);
+  const contactMethod = String(data.contactMethod || '').trim().slice(0, 100);
 
-  if (!name || !subject || !message) {
+  if (!name || !subject || !message || !contactMethod) {
     res.status(400).json({ error: 'Missing fields.' });
     return;
   }
@@ -50,6 +51,7 @@ module.exports = async (req, res) => {
       fields: [
         { name: 'Name', value: name, inline: true },
         { name: 'Subject', value: subject, inline: true },
+        { name: 'Discord to reply to', value: contactMethod, inline: true },
         { name: 'Message', value: message }
       ],
       timestamp: new Date().toISOString()
