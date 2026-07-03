@@ -30,9 +30,9 @@
 
     <nav class="nav-links" id="navLinks">
       <a href="#home" data-i18n="nav.home">Accueil</a>
+      <a href="#journey" data-i18n="nav.journey">Parcours</a>
       <a href="#skills" data-i18n="nav.skills">Compétences</a>
       <a href="#projects" data-i18n="nav.projects">Projets</a>
-      <a href="#journey" data-i18n="nav.journey">Parcours</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
 
@@ -256,6 +256,7 @@
     <div class="contact-grid">
       <div class="contact-info reveal">
         <p data-i18n="contact.info">Vous pouvez aussi me retrouver directement sur les réseaux ci-dessous.</p>
+        <p class="contact-note" data-i18n="contact.note">Je ne réponds que via Discord, depuis mon compte : ops.contact. Indique ton pseudo Discord dans le formulaire pour que je puisse te recontacter.</p>
         <div class="contact-links">
           <a class="contact-link" href="https://x.com/Ops_RobloxDEV" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.68L23.3 22H16.9l-5-6.53L6.1 22H3l8.13-9.29L2.7 2h6.6l4.5 5.97L18.9 2zm-1.13 18h1.72L7.35 3.9H5.5L17.77 20z"/></svg>
@@ -288,6 +289,10 @@
         <div class="form-row">
           <label for="message" data-i18n="contact.form.message">Message du contact</label>
           <textarea id="message" name="message" required maxlength="2000"></textarea>
+        </div>
+        <div class="form-row">
+          <label for="contactMethod" data-i18n="contact.form.method">Moyen de Contact (Discord)</label>
+          <input type="text" id="contactMethod" name="contactMethod" autocomplete="off" required maxlength="80" placeholder="Ton pseudo Discord">
         </div>
         <button type="submit" class="btn btn-primary form-submit" id="formSubmit" data-i18n="contact.form.submit">Envoyer le message</button>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
