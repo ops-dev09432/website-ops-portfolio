@@ -40,6 +40,7 @@
       <div class="lang-switch" role="group" aria-label="Language selector">
         <button type="button" data-lang="fr" class="active">FR</button>
         <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="es">ES</button>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -190,7 +191,7 @@
         <div class="studio-body">
           <h3>KPS Studio INTL</h3>
           <p data-i18n="projects.kpsintl.desc">Branche internationale du réseau KPS Production.</p>
-          <span class="studio-tag" data-i18n="projects.kpsintl.tag">Mon studio</span>
+          <span class="studio-tag" data-i18n="projects.kpsintl.tag">Branche perso</span>
         </div>
       </div>
 
@@ -199,7 +200,7 @@
         <div class="studio-body">
           <h3>KPS Studio EN</h3>
           <p data-i18n="projects.kpsen.desc">Branche anglophone du réseau KPS Production.</p>
-          <span class="studio-tag" data-i18n="projects.kpsen.tag">Mon studio</span>
+          <span class="studio-tag" data-i18n="projects.kpsen.tag">100% maison</span>
         </div>
       </div>
 
@@ -208,7 +209,7 @@
         <div class="studio-body">
           <h3>KPS Studio FR</h3>
           <p data-i18n="projects.kpsfr.desc">Branche francophone du réseau KPS Production.</p>
-          <span class="studio-tag" data-i18n="projects.kpsfr.tag">Mon studio</span>
+          <span class="studio-tag" data-i18n="projects.kpsfr.tag">Studio perso</span>
         </div>
       </div>
 
@@ -217,7 +218,7 @@
         <div class="studio-body">
           <h3>KPS Studio ES</h3>
           <p data-i18n="projects.kpses.desc">Branche hispanophone du réseau KPS Production.</p>
-          <span class="studio-tag" data-i18n="projects.kpses.tag">Mon studio</span>
+          <span class="studio-tag" data-i18n="projects.kpses.tag">Développé par moi</span>
         </div>
       </div>
 
@@ -226,7 +227,7 @@
         <div class="studio-body">
           <h3>1Week Studio</h3>
           <p data-i18n="projects.1week.desc">Mon studio de développement rapide — des jeux entiers conçus en une semaine.</p>
-          <span class="studio-tag" data-i18n="projects.1week.tag">Mon studio</span>
+          <span class="studio-tag" data-i18n="projects.1week.tag">Projet solo</span>
         </div>
       </div>
 
@@ -235,7 +236,7 @@
         <div class="studio-body">
           <h3>BrasilBlox Studio</h3>
           <p data-i18n="projects.brasilblox.desc">Mon studio d'expériences multilingues axées sur le chat vocal.</p>
-          <span class="studio-tag" data-i18n="projects.brasilblox.tag">Mon studio</span>
+          <span class="studio-tag" data-i18n="projects.brasilblox.tag">Studio indépendant</span>
         </div>
       </div>
 
@@ -244,7 +245,7 @@
         <div class="studio-body">
           <h3>TipJar Games</h3>
           <p data-i18n="projects.tipjar.desc">Un de mes studios, spécialisé dans les expériences basées sur un système de dons.</p>
-          <span class="studio-tag" data-i18n="projects.tipjar.tag">Mon studio</span>
+          <span class="studio-tag" data-i18n="projects.tipjar.tag">Mon projet</span>
         </div>
       </div>
     </div>
@@ -268,8 +269,12 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.68L23.3 22H16.9l-5-6.53L6.1 22H3l8.13-9.29L2.7 2h6.6l4.5 5.97L18.9 2zm-1.13 18h1.72L7.35 3.9H5.5L17.77 20z"/></svg>
             x.com/Ops_RobloxDEV
           </a>
+          <a class="contact-link" href="https://www.youtube.com/@Ops_Dev" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg>
+            youtube.com/@Ops_Dev
+          </a>
           <a class="contact-link" href="https://guns.lol/kps_ops" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18"/></svg>
+            <img class="contact-link-icon" src="https://assets.guns.lol/guns_logo_no_background_cropped.png" alt="">
             guns.lol/kps_ops
           </a>
         </div>
@@ -279,10 +284,6 @@
         <div class="form-row">
           <label for="name" data-i18n="contact.form.name">Nom</label>
           <input type="text" id="name" name="name" autocomplete="name" required maxlength="80">
-        </div>
-        <div class="form-row">
-          <label for="email" data-i18n="contact.form.email">Email</label>
-          <input type="email" id="email" name="email" autocomplete="email" required maxlength="120">
         </div>
         <div class="form-row">
           <label for="message" data-i18n="contact.form.message">Message</label>
@@ -307,8 +308,11 @@
       <a href="https://x.com/Ops_RobloxDEV" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.68L23.3 22H16.9l-5-6.53L6.1 22H3l8.13-9.29L2.7 2h6.6l4.5 5.97L18.9 2zm-1.13 18h1.72L7.35 3.9H5.5L17.77 20z"/></svg>
       </a>
+      <a href="https://www.youtube.com/@Ops_Dev" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg>
+      </a>
       <a href="https://guns.lol/kps_ops" target="_blank" rel="noopener noreferrer" aria-label="Guns.lol">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18"/></svg>
+        <img class="footer-social-icon" src="https://assets.guns.lol/guns_logo_no_background_cropped.png" alt="">
       </a>
     </div>
   </div>
