@@ -12,7 +12,7 @@
   const translations = {
     fr: {
       "nav.home":"Accueil","nav.skills":"Compétences","nav.projects":"Projets","nav.journey":"Parcours","nav.contact":"Contact",
-      "hero.role1":"Développeur Roblox","hero.role2":"C.E.O de KPS Production",
+      "hero.role1":"Développeur Roblox","hero.role2":"CEO de KPS Production & TipJar Games",
       "hero.cta1":"Voir les projets","hero.cta2":"Me contacter","hero.scroll":"Scroll",
       "about.eyebrow":"À propos","about.title":"Qui suis-je",
       "about.p1":"Je suis Ops, développeur Roblox français passionné par la création d'expériences immersives et de systèmes performants.",
@@ -46,7 +46,7 @@
       "contact.eyebrow":"Parlons-en","contact.title":"Contact",
       "contact.subtitle":"Une idée de projet, une question ou une proposition de collaboration ? Écrivez-moi.",
       "contact.info":"Vous pouvez aussi me retrouver directement sur les réseaux ci-dessous.",
-      "contact.form.name":"Nom","contact.form.message":"Message","contact.form.submit":"Envoyer le message",
+      "contact.form.name":"Nom","contact.form.subject":"Objet du contact","contact.form.message":"Message du contact","contact.form.submit":"Envoyer le message",
       "footer.tagline":"Développeur Roblox français","footer.rights":"Tous droits réservés.",
       "form.sending":"Envoi en cours…","form.ok":"Message envoyé — merci, je reviens vers vous vite !",
       "form.err":"Une erreur est survenue. Réessaie ou écris-moi directement sur X.",
@@ -88,7 +88,7 @@
       "contact.eyebrow":"Let's talk","contact.title":"Contact",
       "contact.subtitle":"A project idea, a question, or a collab proposal? Write to me.",
       "contact.info":"You can also find me directly on the socials below.",
-      "contact.form.name":"Name","contact.form.message":"Message","contact.form.submit":"Send message",
+      "contact.form.name":"Name","contact.form.subject":"Contact subject","contact.form.message":"Contact message","contact.form.submit":"Send message",
       "footer.tagline":"French Roblox Developer","footer.rights":"All rights reserved.",
       "form.sending":"Sending…","form.ok":"Message sent — thanks, I'll get back to you soon!",
       "form.err":"Something went wrong. Try again or message me directly on X.",
@@ -130,7 +130,7 @@
       "contact.eyebrow":"Hablemos","contact.title":"Contacto",
       "contact.subtitle":"¿Una idea de proyecto, una pregunta o una propuesta de colaboración? Escríbeme.",
       "contact.info":"También puedes encontrarme directamente en las redes de abajo.",
-      "contact.form.name":"Nombre","contact.form.message":"Mensaje","contact.form.submit":"Enviar mensaje",
+      "contact.form.name":"Nombre","contact.form.subject":"Asunto del contacto","contact.form.message":"Mensaje de contacto","contact.form.submit":"Enviar mensaje",
       "footer.tagline":"Desarrollador Roblox francés","footer.rights":"Todos los derechos reservados.",
       "form.sending":"Enviando…","form.ok":"Mensaje enviado — ¡gracias, te responderé pronto!",
       "form.err":"Ha ocurrido un error. Inténtalo de nuevo o escríbeme directamente en X.",
@@ -142,7 +142,7 @@
   const langButtons = document.querySelectorAll('.lang-switch button');
 
   function applyLang(lang){
-    const dict = translations[lang] || translations.fr;
+    const dict = translations[lang] || translations.en;
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (dict[key] !== undefined) el.textContent = dict[key];
@@ -157,8 +157,8 @@
     btn.addEventListener('click', () => applyLang(btn.dataset.lang));
   });
 
-  let savedLang = 'fr';
-  try { savedLang = localStorage.getItem('ops_lang') || 'fr'; } catch(e){}
+  let savedLang = 'en';
+  try { savedLang = localStorage.getItem('ops_lang') || 'en'; } catch(e){}
   applyLang(savedLang);
 
   /* =========================================================
@@ -276,12 +276,13 @@
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const dict = translations[window.__opsLang || 'fr'];
+    const dict = translations[window.__opsLang || 'en'];
 
     const name = form.name.value.trim();
+    const subject = form.subject.value.trim();
     const message = form.message.value.trim();
 
-    if (!name || !message){
+    if (!name || !subject || !message){
       statusEl.textContent = dict['form.required'];
       statusEl.className = 'form-status err';
       return;
@@ -295,7 +296,7 @@
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, message })
+        body: JSON.stringify({ name, subject, message })
       });
 
       if (!res.ok) throw new Error('bad response');
