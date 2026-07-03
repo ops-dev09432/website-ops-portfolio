@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,9 +38,9 @@
 
     <div class="nav-right">
       <div class="lang-switch" role="group" aria-label="Language selector">
-        <button type="button" data-lang="fr" class="active">FR</button>
-        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="en" class="active">EN</button>
         <button type="button" data-lang="es">ES</button>
+        <button type="button" data-lang="fr">FR</button>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -61,7 +61,7 @@
       <img src="assets/img/discord-pfp.png" alt="Portrait Discord d'Ops">
     </div>
 
-    <h1 class="hero-title">OPS <span class="grad">.dev</span></h1>
+    <h1 class="hero-title">KPS<span class="grad">_OPS</span></h1>
     <p class="hero-role"><span data-i18n="hero.role1">Développeur Roblox</span> — <span class="studio-name" data-i18n="hero.role2">CEO de KPS Production &amp; TipJar Games</span></p>
 
     <div class="hero-badges">
@@ -77,7 +77,7 @@
     </div>
   </div>
 
-  <div class="scroll-cue"><span data-i18n="hero.scroll">Scroll</span><span class="stick"></span></div>
+  <div class="scroll-cue"><span data-i18n="hero.scroll">Scroll</span><span class="mouse"></span></div>
 </section>
 
 <!-- ================= JOURNEY / DISCOVER ================= -->
@@ -282,7 +282,11 @@
           <input type="text" id="name" name="name" autocomplete="name" required maxlength="80">
         </div>
         <div class="form-row">
-          <label for="message" data-i18n="contact.form.message">Message</label>
+          <label for="subject" data-i18n="contact.form.subject">Objet du contact</label>
+          <input type="text" id="subject" name="subject" autocomplete="off" required maxlength="150">
+        </div>
+        <div class="form-row">
+          <label for="message" data-i18n="contact.form.message">Message du contact</label>
           <textarea id="message" name="message" required maxlength="2000"></textarea>
         </div>
         <button type="submit" class="btn btn-primary form-submit" id="formSubmit" data-i18n="contact.form.submit">Envoyer le message</button>
