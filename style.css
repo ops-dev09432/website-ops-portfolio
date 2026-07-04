@@ -340,41 +340,6 @@ section{ position:relative; padding:7rem 0; }
   to{ opacity:1; transform:translateY(0); }
 }
 
-.scroll-cue{
-  position:absolute; bottom:2.2rem; left:50%; transform:translateX(-50%);
-  z-index:2;
-  display:flex; flex-direction:column; align-items:center; gap:.5rem;
-  color:var(--text-faint);
-  font-size:.68rem;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  opacity:0; animation:fade-up .9s var(--ease) .9s both;
-}
-.scroll-cue > span:first-child{
-  margin-right:-.18em;
-}
-.scroll-cue .mouse{
-  width:24px; height:38px;
-  border:1.5px solid var(--text-faint);
-  border-radius:14px;
-  position:relative;
-}
-.scroll-cue .mouse::after{
-  content:"";
-  position:absolute;
-  top:6px; left:50%; transform:translateX(-50%);
-  width:3px; height:7px;
-  border-radius:2px;
-  background:var(--accent-2);
-  animation:cue-wheel 1.8s ease-in-out infinite;
-}
-@keyframes cue-wheel{
-  0%{ top:6px; opacity:1; }
-  60%{ top:18px; opacity:.3; }
-  61%{ top:6px; opacity:0; }
-  100%{ top:6px; opacity:1; }
-}
-
 /* Buttons */
 .btn{
   display:inline-flex; align-items:center; gap:.55rem;
@@ -792,9 +757,12 @@ footer{
 @media (max-width:980px){
   .about-grid{ grid-template-columns:1fr; gap:2.6rem; }
   .about-visual{ order:-1; }
+  .contact-grid{ grid-template-columns:1fr; gap:2.4rem; }
+}
+
+@media (max-width:680px){
   .skills-grid{ grid-template-columns:1fr; }
   .studios-grid{ grid-template-columns:1fr; }
-  .contact-grid{ grid-template-columns:1fr; gap:2.4rem; }
 }
 
 @media (max-width:760px){
@@ -820,4 +788,31 @@ footer{
 @media (max-width:480px){
   .hero-badges{ gap:.4rem; }
   .studio-card{ flex-direction:column; }
+}
+
+@media (max-width:420px){
+  .container{ width:min(1180px, 100% - 2rem); }
+  .nav-brand{ font-size:1.02rem; }
+  .lang-switch button{ padding:.35rem .6rem; font-size:.68rem; }
+  .hero-avatar-ring{ width:132px; height:132px; }
+  .hero-title{ font-size:clamp(2.1rem, 11vw, 3.2rem); }
+  .hero-role{ font-size:.92rem; }
+  .btn{ padding:.75rem 1.3rem; font-size:.85rem; }
+  .about-visual{ padding:1.5rem; }
+  .cluster-tile{ border-radius:12px; }
+  .skill-card{ padding:1.6rem 1.4rem; }
+  .studio-card{ padding:1.4rem 1.5rem; }
+  .discover-panel{ padding:2.2rem 1.3rem; }
+  .contact-form{ padding:1.6rem; }
+}
+
+@media (min-width:1600px){
+  .container{ width:min(1360px, 100% - 4rem); }
+  body{ font-size:1.05rem; }
+  .skills-grid{ gap:1.7rem; }
+  .studios-grid{ gap:1.6rem; }
+}
+
+@media (min-width:2000px){
+  .container{ width:min(1520px, 100% - 6rem); }
 }
