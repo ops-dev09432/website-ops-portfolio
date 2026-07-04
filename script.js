@@ -13,7 +13,7 @@
     fr: {
       "nav.home":"Accueil","nav.skills":"Compétences","nav.projects":"Projets","nav.journey":"Parcours","nav.contact":"Contact",
       "hero.role1":"Développeur Roblox","hero.role2":"C.E.O de KPS Production",
-      "hero.cta1":"Voir les projets","hero.cta2":"Me contacter","hero.scroll":"Scroll",
+      "hero.cta1":"Voir les projets","hero.cta2":"Me contacter",
       "about.eyebrow":"À propos","about.title":"Qui suis-je",
       "about.p1":"Je suis Ops, développeur Roblox français passionné par la création d'expériences immersives et de systèmes performants.",
       "about.p2":"Guidé par la curiosité et une envie constante de progresser, je cherche toujours à élargir mes connaissances et à relever de nouveaux défis.",
@@ -56,7 +56,7 @@
     en: {
       "nav.home":"Home","nav.skills":"Skills","nav.projects":"Projects","nav.journey":"Journey","nav.contact":"Contact",
       "hero.role1":"Roblox Developer","hero.role2":"CEO of KPS Production & TipJar Games",
-      "hero.cta1":"View projects","hero.cta2":"Get in touch","hero.scroll":"Scroll",
+      "hero.cta1":"View projects","hero.cta2":"Get in touch",
       "about.eyebrow":"About","about.title":"About Me",
       "about.p1":"I'm Ops, a French Roblox developer passionate about creating immersive experiences and high-performance systems.",
       "about.p2":"Driven by curiosity and a constant desire to improve, I'm always looking to expand my knowledge and take on new challenges.",
@@ -99,7 +99,7 @@
     es: {
       "nav.home":"Inicio","nav.skills":"Habilidades","nav.projects":"Proyectos","nav.journey":"Trayectoria","nav.contact":"Contacto",
       "hero.role1":"Desarrollador Roblox","hero.role2":"CEO de KPS Production & TipJar Games",
-      "hero.cta1":"Ver proyectos","hero.cta2":"Contactarme","hero.scroll":"Scroll",
+      "hero.cta1":"Ver proyectos","hero.cta2":"Contactarme",
       "about.eyebrow":"Sobre mí","about.title":"Quién soy",
       "about.p1":"Soy Ops, desarrollador Roblox francés apasionado por crear experiencias inmersivas y sistemas de alto rendimiento.",
       "about.p2":"Impulsado por la curiosidad y unas ganas constantes de mejorar, siempre busco ampliar mis conocimientos y asumir nuevos retos.",
