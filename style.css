@@ -54,7 +54,7 @@ a{ color:inherit; text-decoration:none; }
 button{ font:inherit; cursor:pointer; }
 ul{ list-style:none; }
 
-::selection{ background:var(--accent); color:#fff; }
+::selection{ background:rgba(70,130,255,0.35); color:inherit; }
 
 ::-webkit-scrollbar{ width:10px; }
 ::-webkit-scrollbar-track{ background:var(--bg); }
