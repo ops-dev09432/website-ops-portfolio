@@ -3,8 +3,8 @@
    Design tokens
    ========================================================================== */
 :root{
-  --bg:            #07070c;
-  --bg-soft:       #0c0c15;
+  --bg:            #000000;
+  --bg-soft:       #060606;
   --surface:       rgba(255,255,255,0.045);
   --surface-hi:    rgba(255,255,255,0.09);
   --border:        rgba(255,255,255,0.09);
@@ -61,7 +61,6 @@ ul{ list-style:none; }
 ::-webkit-scrollbar-thumb{ background:#2a2a3a; border-radius:10px; }
 ::-webkit-scrollbar-thumb:hover{ background:var(--accent); }
 
-/* Focus visibility */
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
   outline:2px solid var(--accent-2);
   outline-offset:3px;
@@ -110,12 +109,32 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 section{ position:relative; padding:7rem 0; }
 
-/* ambient floating background particles */
 .particles{
   position:fixed; inset:0;
   pointer-events:none;
   z-index:0;
   overflow:hidden;
+}
+
+.cursor-glow{
+  position:fixed;
+  top:0; left:0;
+  width:520px; height:520px;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:1;
+  background:radial-gradient(circle, rgba(123,97,255,0.14) 0%, rgba(123,97,255,0.06) 35%, transparent 70%);
+  transform:translate(calc(var(--mx, -1000px) - 50%), calc(var(--my, -1000px) - 50%));
+  opacity:0;
+  transition:opacity .4s ease;
+  will-change:transform;
+}
+.cursor-glow.is-active{ opacity:1; }
+@media (hover:none), (pointer:coarse){
+  .cursor-glow{ display:none; }
+}
+@media (prefers-reduced-motion: reduce){
+  .cursor-glow{ display:none; }
 }
 .particles span{
   position:absolute;
@@ -154,7 +173,7 @@ section{ position:relative; padding:7rem 0; }
   border-bottom:1px solid transparent;
 }
 .navbar.scrolled{
-  background:rgba(7,7,12,0.72);
+  background:rgba(0,0,0,0.72);
   backdrop-filter:blur(18px) saturate(140%);
   -webkit-backdrop-filter:blur(18px) saturate(140%);
   border-bottom:1px solid var(--border);
@@ -256,8 +275,8 @@ section{ position:relative; padding:7rem 0; }
 .hero-banner-fade{
   position:absolute; inset:0;
   background:
-    linear-gradient(180deg, rgba(7,7,12,0.15) 0%, rgba(7,7,12,0.55) 55%, var(--bg) 96%),
-    linear-gradient(90deg, rgba(7,7,12,0.55) 0%, transparent 30%, transparent 70%, rgba(7,7,12,0.55) 100%);
+    linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 55%, var(--bg) 96%),
+    linear-gradient(90deg, rgba(0,0,0,0.55) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.55) 100%);
 }
 .hero-content{
   position:relative; z-index:2;
@@ -365,10 +384,8 @@ section{ position:relative; padding:7rem 0; }
 .btn-ghost:hover{ border-color:var(--border-hi); transform:translateY(-2px); background:var(--surface-hi); }
 
 /* ==========================================================================
-   Reveal utility
+   Reveal utility (default visible; JS confirms activation via html.js)
    ========================================================================== */
-/* Default: visible (no-JS / JS-failure fallback). Only hidden once html.js
-   confirms the reveal script is running and will animate items in. */
 .reveal{ opacity:1; transform:none; }
 html.js .reveal{
   opacity:0;
@@ -433,11 +450,12 @@ html.js .reveal-stagger > *{
   filter:blur(70px);
   opacity:.25;
 }
+
 .studio-cluster{
   display:grid;
-  grid-template-columns:repeat(4, 1fr);
+  grid-template-columns:repeat(3, 1fr);
   gap:14px;
-  max-width:360px;
+  max-width:300px;
   margin-inline:auto;
 }
 .cluster-tile{
@@ -472,6 +490,7 @@ html.js .reveal-stagger > *{
 @media (prefers-reduced-motion: reduce){
   .cluster-tile{ animation:none; }
 }
+
 .orbit-caption{
   text-align:center; margin-top:1.6rem;
   font-size:.8rem; color:var(--text-faint);
@@ -761,16 +780,11 @@ footer{
   .contact-grid{ grid-template-columns:1fr; gap:2.4rem; }
 }
 
-@media (max-width:680px){
-  .skills-grid{ grid-template-columns:1fr; }
-  .studios-grid{ grid-template-columns:1fr; }
-}
-
 @media (max-width:760px){
   .nav-links{
     position:fixed; top:64px; left:0; right:0;
     flex-direction:column; align-items:flex-start; gap:0;
-    background:rgba(7,7,12,0.97);
+    background:rgba(0,0,0,0.97);
     backdrop-filter:blur(18px);
     border-bottom:1px solid var(--border);
     padding:.5rem 1.5rem 1.5rem;
@@ -783,7 +797,11 @@ footer{
   .nav-toggle{ display:flex; }
   .lang-switch{ order:2; }
   section{ padding:4.5rem 0; }
-  .studio-cluster{ max-width:280px; gap:10px; }
+}
+
+@media (max-width:680px){
+  .skills-grid{ grid-template-columns:1fr; }
+  .studios-grid{ grid-template-columns:1fr; }
 }
 
 @media (max-width:480px){
